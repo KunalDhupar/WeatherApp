@@ -117,13 +117,13 @@ class LocationFragment : Fragment() {
         }
         val btn=view.findViewById<Button>(R.id.weatherB)
         btn.setOnClickListener {
-            val WFrag=ShowCurrentWeatherFragment()
-            val bundle=Bundle()
-            val cName=cityName.text.toString()
-            bundle.putString("City",cName)
-            WFrag.arguments=bundle
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.parentL,WFrag)
-                ?.addToBackStack(null)?.commit()
+//            val WFrag=ShowCurrentWeatherFragment()
+//            val bundle=Bundle()
+//            val cName=cityName.text.toString()
+//            bundle.putString("City",cName)
+//            WFrag.arguments=bundle
+//            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.parentL,WFrag)
+//                ?.addToBackStack(null)?.commit()
         }
 
         view.findViewById<Button>(R.id.climateB).setOnClickListener {
