@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        val hostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment2) as NavHostFragment
+        val graph = hostFragment.navController.navInflater.inflate(R.navigation.app_navigation)
+        graph.startDestination = R.id.locationFragment
+        hostFragment.navController.graph = graph
     }
 
 
